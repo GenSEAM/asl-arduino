@@ -1,0 +1,55 @@
+;; Package Grammar & Exported Symbol Registry (ASN)
+;; @genseam/asl-arduino
+(:grammar
+  :package @genseam/asl-arduino
+  :version "0.1.0"
+  :tokens-baseline 1
+  :symbols [
+    ;; 1-Token Symbols (Baseline)
+    (:sym :name "Pin" :kind :type :tokens 1)
+    (:sym :name "SerialPort" :kind :type :tokens 1)
+
+    ;; 2-Token Symbols (with :rationale)
+    (:sym :name "make-pin" :kind :fn :tokens 2
+          :rationale "Constructs a hardware GPIO Pin descriptor with pin number and state")
+    (:sym :name "set-mode" :kind :fn :tokens 2
+          :rationale "Configures microcontroller pin direction as input or output")
+    (:sym :name "write-pin" :kind :fn :tokens 2
+          :rationale "Writes digital voltage level (HIGH/LOW) to specified pin")
+    (:sym :name "read-pin" :kind :fn :tokens 2
+          :rationale "Reads current binary voltage state from specified pin")
+    (:sym :name "pin-output" :kind :fn :tokens 2
+          :rationale "Constant representing GPIO output mode")
+    (:sym :name "pin-input" :kind :fn :tokens 2
+          :rationale "Constant representing GPIO input mode")
+    (:sym :name "pin-high" :kind :fn :tokens 2
+          :rationale "Constant representing HIGH digital logic level")
+    (:sym :name "pin-low" :kind :fn :tokens 2
+          :rationale "Constant representing LOW digital logic level")
+    (:sym :name "init-serial" :kind :fn :tokens 2
+          :rationale "Initializes UART serial communication interface at specified baud rate")
+    (:sym :name "serial-print" :kind :fn :tokens 2
+          :rationale "Transmits ASCII text payload over serial interface without newline")
+    (:sym :name "serial-println" :kind :fn :tokens 2
+          :rationale "Transmits ASCII text payload over serial interface appended with newline")
+    (:sym :name "setup-blink" :kind :fn :tokens 2
+          :rationale "Configures standard onboard LED pin for blink cycle")
+    (:sym :name "step-blink" :kind :fn :tokens 2
+          :rationale "Toggles LED state for one execution cycle of blink loop")
+    (:sym :name "run-tests" :kind :fn :tokens 2
+          :rationale "Executes unit test suite")
+
+    ;; >2 Token Symbols (with :rationale)
+    (:sym :name "test-make-pin" :kind :fn :tokens 3
+          :rationale "Verifies GPIO pin initialization")
+    (:sym :name "test-write-pin" :kind :fn :tokens 3
+          :rationale "Verifies digital pin state updates")
+    (:sym :name "test-read-pin" :kind :fn :tokens 3
+          :rationale "Verifies digital pin state reads")
+    (:sym :name "test-blink-example" :kind :fn :tokens 3
+          :rationale "Verifies LED toggle step logic")
+    (:sym :name "test-init-serial" :kind :fn :tokens 3
+          :rationale "Verifies UART serial initialization")
+    (:sym :name "test-serial-println" :kind :fn :tokens 3
+          :rationale "Verifies newline serial transmission buffer")
+  ])
