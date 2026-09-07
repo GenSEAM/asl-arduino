@@ -1,6 +1,8 @@
 (:package @genseam/asl-arduino
   :version "0.1.0"
+  :status "conceptual-schema"
   :entry "src/gpio.asl"
-  :desc "AgentScript Embedded Hardware & Arduino driver package"
-  :deps []
-)
+  :description "AgentScript Embedded Hardware & Arduino driver conceptual schema"
+  :asl-first true
+  :dependencies [])
+
