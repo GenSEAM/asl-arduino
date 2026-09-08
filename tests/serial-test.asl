@@ -6,16 +6,20 @@
 (df test-init-serial [] -> Bool
   :d "Verifies serial port initialization."
   (let [(port (s/init-serial 115200))]
-    (and (= (.-baud port) 115200)
-         (.-open port))))
+    (assert (= (.-baud port) 115200) "Serial port baud must equal 115200")
+    (assert (.-open port) "Serial port must be open")
+    true))
 
 (df test-serial-println [] -> Bool
   :d "Verifies string payload formatted with trailing newline."
   (let [(port (s/init-serial 9600))
         (out (s/serial-println port "PING"))]
-    (= out "PING\n")))
+    (assert (= out "PING\n") "Serial println output must equal PING\\n")
+    true))
 
 (df run-tests [] -> Bool
   :d "Runs all Serial unit tests."
-  (and (test-init-serial)
-       (test-serial-println)))
+  (do
+    (assert (test-init-serial) "test-init-serial must pass")
+    (assert (test-serial-println) "test-serial-println must pass")
+    true))
