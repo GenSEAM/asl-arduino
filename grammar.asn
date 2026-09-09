@@ -1,7 +1,7 @@
 ;; Package Grammar & Exported Symbol Registry (ASN)
-;; @genseam/asl-arduino
+;; asl-arduino
 (:grammar
-  :package @genseam/asl-arduino
+  :package asl-arduino
   :version "0.1.0"
   :tokens-baseline 1
   :symbols [

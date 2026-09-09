@@ -1,4 +1,4 @@
-(:package @genseam/asl-arduino
+(:package asl-arduino
   :version "0.1.0"
   :status "conceptual-schema"
   :entry "src/gpio.asl"
