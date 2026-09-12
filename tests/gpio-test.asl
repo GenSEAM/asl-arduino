@@ -37,8 +37,7 @@
 
 (df run-tests [] -> Bool
   :d "Runs all GPIO unit tests."
-  (let [(_t1 (test-make-pin))
-        (_t2 (test-write-pin))
-        (_t3 (test-read-pin))
-        (_t4 (test-blink-example))]
-    true))
+  (let [(t1 (test-make-pin))
+        (t2 (test-write-pin))
+        (t3 (test-read-pin))
+        (t4 (test-blink-example))] (and t1 (and t2 (and t3 t4)))))
