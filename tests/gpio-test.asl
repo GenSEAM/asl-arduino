@@ -2,7 +2,7 @@
   :d "Unit tests for GPIO pin modes and signal toggling."
   :x [test-make-pin test-write-pin test-read-pin test-blink-example run-tests]
   :i [(gpio :a g)
-      (examples/blink :a b)])
+      (../examples/blink :a b)])
 
 (df test-make-pin [] -> Bool
   :d "Verifies pin allocation defaults."
