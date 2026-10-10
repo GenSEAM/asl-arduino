@@ -1,10 +1,5 @@
-# @genseam/asl-arduino
+# asl-arduino
 
-> [!IMPORTANT]
-> **Status: Conceptual Schema (`conceptual-schema`)**
-> This package defines formal AgentScript schemas and compile-target AST models for embedded microcontrollers, GPIO pin control, and UART serial communication. It is a **conceptual/theoretical interface specification**, not a live hardware driver. It does not interface directly with physical AVR/ARM/ESP32 serial ports or bare-metal silicon.
+Archived. Discontinued experiment.
 
-## Overview
-- Pure AgentScript GPIO control primitives and pin modes
-- UART serial communication record schemas
-- Embedded microcontroller compilation targets
+This repository is read-only and has no successor. Active work on AgentScript (ASL) is in [GenSEAM/asl](https://github.com/GenSEAM/asl); the site is [aslang.dev](https://aslang.dev).
